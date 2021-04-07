@@ -11,14 +11,14 @@ class MenuList extends Component {
                      <th spoce="col">Name</th>
                      <th spoce="col">Volume</th>
                      <th spoce="col">price</th>
+                     <th></th>
                  </tr>
             </thead> 
             <tbody>
-                <MenuItem/>
-                <MenuItem/>
-                <MenuItem/>
-                <MenuItem/>
-                <MenuItem/>
+            {this.props.menu.map((item,index)=>(
+                <MenuItem  addCart={this.props.addCart}key={item.id}index={index} item={item}/>
+            ))}
+               
                 
              </tbody>  
             </table>
